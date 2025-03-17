@@ -49,6 +49,7 @@ Genaro revisará el PR. Si hay comentarios:
 1. Realizar ajustes en tu rama.
 2. Repetir el paso de **Subir cambios a GitHub** para actualizar el PR.
 
+ 
 Si Genaro aprueba, el PR se fusionará a `dev`.
 
 ## Manejo de PRs rechazados
@@ -85,3 +86,5 @@ Si hay conflictos, Git te lo indicará. Verás marcadores de conflicto (`<<<<<<<
     git commit -m "Resueltos conflictos al fusionar dev"
     ```
 4.  **Continuar con el flujo normal:** Sigue trabajando en tu rama y crea un PR cuando estés listo.
+ 
+ 
