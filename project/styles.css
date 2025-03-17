@@ -1,0 +1,11 @@
+#myButton {
+    padding: 10px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}
