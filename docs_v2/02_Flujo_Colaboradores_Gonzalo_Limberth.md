@@ -50,3 +50,38 @@ Genaro revisará el PR. Si hay comentarios:
 2. Repetir el paso de **Subir cambios a GitHub** para actualizar el PR.
 
 Si Genaro aprueba, el PR se fusionará a `dev`.
+
+## Manejo de PRs rechazados
+
+Si Genaro no aprueba el PR y solicita cambios:
+
+1.  **Realizar los ajustes solicitados:** Modifica los archivos necesarios en tu rama local para corregir los problemas señalados por Genaro.
+2.  **Subir los cambios nuevamente:**
+    ```bash
+    git add .
+    git commit -m "Correcciones solicitadas por Genaro"
+    git push origin <tu_rama>  # Ej: git push origin gonzalo
+    ```
+3.  **Notificar a Genaro:** Agrega un comentario en el PR mencionando a Genaro para que sepa que has realizado los cambios solicitados.
+
+## Integrar cambios de `dev` con conflictos
+
+Si tienes cambios locales en tu rama (`gonzalo`) y quieres integrar los cambios de `dev`, puede haber conflictos si ambos han modificado las mismas líneas de los mismos archivos.
+
+```bash
+git checkout dev
+git pull origin dev
+git checkout gonzalo  # Cambiar a tu rama
+git merge dev
+```
+
+Si hay conflictos, Git te lo indicará. Verás marcadores de conflicto (`<<<<<<<`, `=======`, `>>>>>>>`) en los archivos afectados.
+
+1.  **Abrir los archivos con conflictos:** Edita los archivos para resolver los conflictos. Decide qué código mantener (el tuyo, el de `dev` o una combinación).
+2.  **Eliminar los marcadores de conflicto:** Una vez resueltos los conflictos, elimina los marcadores `<<<<<<<`, `=======` y `>>>>>>>`.
+3.  **Agregar y commitear los cambios:**
+    ```bash
+    git add .
+    git commit -m "Resueltos conflictos al fusionar dev"
+    ```
+4.  **Continuar con el flujo normal:** Sigue trabajando en tu rama y crea un PR cuando estés listo.
