@@ -1,0 +1,42 @@
+
+Flujo diario para Genaro (dueño del proyecto)
+Objetivo : Revisar cambios, aprobar PRs y mantener main estable.
+
+
+Paso 1: Revisar Pull Requests (PRs)
+En GitHub, ir a Pull Requests .
+Revisar cada PR (de genaro, gonzalo o limberth a dev):
+Ver cambios en Files changed .
+Aprobar o solicitar correcciones.   
+
+
+Paso 2: Aprobar y fusionar PRs a dev
+Si el PR está OK:
+Hacer clic en Merge Pull Request .
+Confirmar fusión.
+Eliminar rama (opcional) si ya no se usará.
+
+
+Paso 3: Probar cambios en dev
+Actualizar dev local
+git checkout dev
+git pull origin dev        # Traer cambios fusionados
+
+
+Paso 4: Actualizar main desde dev
+Crear PR de dev a main :
+En GitHub: New Pull Request → Base: main, Compare: dev .
+Aprobar y fusionar.
+
+
+Paso 4: Actualizar main desde dev
+Crear PR de dev a main :
+En GitHub: New Pull Request → Base: main, Compare: dev .
+Aprobar y fusionar.
+git checkout main
+git pull origin main      
+
+
+Siempre actualizar tu rama con dev antes de trabajar:
+git checkout tu-rama
+git merge dev

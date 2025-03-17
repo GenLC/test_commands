@@ -1,0 +1,33 @@
+Archivo 1: 01_Configuracion_Inicial_Genaro.txt
+Configuración inicial (ejecutar una vez por Genaro)
+Objetivo : Crear ramas y configurar el repositorio para el workflow.
+
+
+
+Crear rama dev desde main
+git checkout main          # Cambiar a la rama main
+git pull origin main       # Actualizar main con la versión remota
+git checkout -b dev        # Crear y cambiar a la rama dev
+git push -u origin dev     # Subir rama dev a GitHub
+
+
+Crear ramas para colaboradores (basadas en dev)
+git checkout dev           # Asegurarse de estar en dev
+git checkout -b genaro     # Crear rama genaro
+git push -u origin genaro  # Subir a GitHub
+git checkout dev           # Volver a dev
+git checkout -b gonzalo    # Crear rama gonzalo
+git push -u origin gonzalo
+git checkout dev
+git checkout -b limberth   # Crear rama limberth
+git push -u origin limberth
+
+
+Paso 2: Proteger ramas críticas (en GitHub)
+Ir a Settings → Branches en el repositorio de GitHub.
+Proteger main:
+Require a pull request before merging : Activar.
+Require approvals : 1 (Genaro como aprobador).
+Proteger dev:
+Require a pull request before merging : Activar.
+Require approvals : 1 (Genaro como aprobador).

@@ -1,0 +1,34 @@
+Archivo 2: 02_Flujo_Colaboradores_Gonzalo_Limberth.txt
+Flujo diario para colaboradores (Gonzalo y Limberth)
+Objetivo : Trabajar en sus ramas, enviar cambios a dev y coordinar con Genaro.
+
+Actualizar rama local con dev
+git checkout dev           # Cambiar a dev
+git pull origin dev        # Traer últimos cambios de dev
+git checkout gonzalo       # Cambiar a tu rama (ej: gonzalo)
+git merge dev              # Integrar cambios de dev en tu rama
+
+Realizar cambios :
+Editar archivos en tu rama.
+Guardar cambios .
+
+Paso 2: Subir cambios a GitHub
+git add .                    # Preparar todos los cambios
+git commit -m "Descripción del cambio"  # Ej: "Arreglo bug en login"
+git push origin gonzalo      # Subir cambios a tu rama en GitHub
+
+
+Paso 3: Crear Pull Request (PR) a dev
+En GitHub, ir a Pull Requests → New Pull Request .
+Seleccionar:
+Base : dev (rama destino).
+Compare : Tu rama (ej: gonzalo).
+Escribir descripción del cambio y @mencionar a Genaro.
+Hacer clic en Create Pull Request .
+
+
+Paso 4: Esperar aprobación
+Genaro revisará el PR. Si hay comentarios:
+Realizar ajustes en tu rama.
+Repetir Paso 2 para actualizar el PR.
+Si Genaro aprueba, el PR se fusionará a dev.
